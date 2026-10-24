@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#123c2d" />
+  <title>KrishiMitra AI — Farmer Assistance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="KrishiMitra home">
+        <span class="brand-mark"><i data-lucide="sprout"></i></span>
+        <span><strong>KrishiMitra<span class="brand-ai"> AI</span></strong><small>FARMER COMPANION</small></span>
+      </a>
+      <div class="farm-card">
+        <div class="farm-avatar"><i data-lucide="wheat"></i></div>
+        <div><strong id="greetingName">Namaste, Kisan</strong><small>Your farm, supported.</small></div>
+      </div>
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="nav-list">
+        <button class="nav-item active" data-view="overview"><i data-lucide="layout-dashboard"></i><span data-i18n="navHome">Overview</span></button>
+        <button class="nav-item" data-view="assistant"><i data-lucide="messages-square"></i><span data-i18n="navAssistant">AI Assistant</span><span class="nav-dot"></span></button>
+        <button class="nav-item" data-view="crop"><i data-lucide="leaf"></i><span data-i18n="navCrop">Crop Doctor</span></button>
+        <button class="nav-item" data-view="weather"><i data-lucide="cloud-sun"></i><span data-i18n="navWeather">Weather & Advice</span></button>
+        <button class="nav-item" data-view="schemes"><i data-lucide="landmark"></i><span data-i18n="navSchemes">Govt. Schemes</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="trust-mini"><i data-lucide="shield-check"></i><div><strong>Trust first</strong><small>Sources shown with answers</small></div></div>
+        <button class="nav-item" id="aboutBtn"><i data-lucide="info"></i><span data-i18n="navAbout">About KrishiMitra</span></button>
+        <div class="sidebar-foot">Built for India's farming community<br><span>Prototype · Information assistant</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu"><i data-lucide="menu"></i></button>
+        <div class="breadcrumb"><span>Workspace</span><i data-lucide="chevron-right"></i><strong id="pageCrumb">Overview</strong></div>
+        <div class="top-actions">
+          <span class="live-status"><span class="pulse"></span><span data-i18n="systemReady">Assistant ready</span></span>
+          <label class="language-select"><i data-lucide="languages"></i><select id="languageSelect" aria-label="Choose language"><option value="en">English</option><option value="hi">हिन्दी (Hindi)</option><option value="gu">ગુજરાતી (Gujarati)</option><option value="mr">मराठी (Marathi)</option><option value="bn">বাংলা (Bengali)</option><option value="ta">தமிழ் (Tamil)</option><option value="te">తెలుగు (Telugu)</option><option value="pa">ਪੰਜਾਬੀ (Punjabi)</option><option value="kn">ಕನ್ನಡ (Kannada)</option><option value="ml">മലയാളം (Malayalam)</option><option value="or">ଓଡ଼ିଆ (Odia)</option><option value="as">অসমীয়া (Assamese)</option><option value="ur">اردو (Urdu)</option><option value="auto">🌐 Auto-detect / Other language</option></select></label>
+          <button class="profile-chip" id="profileBtn"><span class="profile-avatar">K</span><span class="profile-text">Farmer profile</span><i data-lucide="chevron-down"></i></button>
+        </div>
+      </header>
+
+      <section class="view active" id="view-overview">
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="heroEyebrow">YOUR DIGITAL FARM COMPANION</span></div>
+            <h1 data-i18n="heroTitle">Better decisions.<br><em>Healthier harvests.</em></h1>
+            <p data-i18n="heroDesc">Practical farming guidance, weather updates and government scheme information — in a language you understand.</p>
+            <div class="hero-actions"><button class="btn btn-light" data-goto="assistant"><i data-lucide="message-circle"></i><span data-i18n="askAssistant">Ask KrishiMitra</span><i data-lucide="arrow-up-right"></i></button><button class="hero-link" data-goto="schemes" data-i18n="exploreSchemes">Explore schemes <i data-lucide="arrow-right"></i></button></div>
+            <div class="hero-proof"><div class="proof-avatars"><span>क</span><span>🌾</span><span>✓</span></div><span data-i18n="heroProof">Made for farmers. Designed for clarity.</span></div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="sun"></div><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+            <div class="field field-back"></div><div class="field field-mid"></div><div class="field field-front"></div>
+            <div class="plant plant-one"><span></span><span></span><span></span></div><div class="plant plant-two"><span></span><span></span><span></span></div><div class="plant plant-three"><span></span><span></span><span></span></div>
+            <div class="art-note note-weather"><i data-lucide="cloud-sun"></i><span><b>Weather aware</b><small>Plan with confidence</small></span></div>
+            <div class="art-note note-trust"><i data-lucide="badge-check"></i><span><b>Source-led</b><small>No made-up facts</small></span></div>
+          </div>
+        </div>
+
+        <div class="section-heading"><div><span class="section-kicker" data-i18n="quickTools">QUICK TOOLS</span><h2 data-i18n="toolsTitle">What do you need today?</h2></div><span class="section-side" data-i18n="toolsSub">Choose a starting point</span></div>
+        <div class="tool-grid">
+          <button class="tool-card" data-goto="assistant"><span class="tool-icon icon-green"><i data-lucide="messages-square"></i></span><span class="tool-title" data-i18n="toolAskTitle">Ask the AI assistant</span><span class="tool-desc" data-i18n="toolAskDesc">Get simple answers to farming questions.</span><span class="tool-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+          <button class="tool-card" data-goto="crop"><span class="tool-icon icon-orange"><i data-lucide="scan-search"></i></span><span class="tool-title" data-i18n="toolCropTitle">Check a crop problem</span><span class="tool-desc" data-i18n="toolCropDesc">Describe symptoms and review safe next steps.</span><span class="tool-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+          <button class="tool-card" data-goto="weather"><span class="tool-icon icon-blue"><i data-lucide="cloud-sun"></i></span><span class="tool-title" data-i18n="toolWeatherTitle">Weather & field advice</span><span class="tool-desc" data-i18n="toolWeatherDesc">Look up current conditions for your area.</span><span class="tool-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+          <button class="tool-card" data-goto="schemes"><span class="tool-icon icon-purple"><i data-lucide="landmark"></i></span><span class="tool-title" data-i18n="toolSchemeTitle">Find a government scheme</span><span class="tool-desc" data-i18n="toolSchemeDesc">Explore official scheme information and links.</span><span class="tool-arrow"><i data-lucide="arrow-up-right"></i></span></button>
+        </div>
+
+        <div class="lower-grid">
+          <div class="panel source-panel">
+            <div class="panel-heading"><div><span class="section-kicker" data-i18n="trustCorner">THE TRUST CORNER</span><h3 data-i18n="trustTitle">Advice you can check</h3></div><span class="round-icon"><i data-lucide="shield-check"></i></span></div>
+            <p data-i18n="trustDesc">Important information should come with a source. KrishiMitra separates verified links from general guidance and tells you when something cannot be confirmed.</p>
+            <div class="trust-points"><span><i data-lucide="check-circle-2"></i><span data-i18n="trustPoint1">Official links for schemes</span></span><span><i data-lucide="check-circle-2"></i><span data-i18n="trustPoint2">Uncertainty stated clearly</span></span><span><i data-lucide="check-circle-2"></i><span data-i18n="trustPoint3">No guaranteed diagnoses</span></span></div>
+          </div>
+          <div class="panel scheme-feature">
+            <div class="scheme-feature-top"><span class="scheme-tag"><i data-lucide="landmark"></i> GOVERNMENT SCHEME</span><i data-lucide="arrow-up-right"></i></div>
+            <div class="scheme-emblem"><i data-lucide="sprout"></i></div>
+            <h3>PM-KISAN Samman Nidhi</h3>
+            <p data-i18n="pmDesc">Check official scheme details, beneficiary status and registration options on the government portal.</p>
+            <a class="text-link" href="https://pmkisan.gov.in/" target="_blank" rel="noopener noreferrer">Visit official portal <i data-lucide="external-link"></i></a>
+            <small class="source-caption">Source: pmkisan.gov.in</small>
+          </div>
+        </div>
+        <footer class="page-footer"><span>© 2026 KrishiMitra AI · Prototype</span><span><i data-lucide="shield-check"></i> <span data-i18n="footerNote">Guidance, not a substitute for local agricultural experts.</span></span></footer>
+      </section>
+
+      <section class="view" id="view-assistant">
+        <div class="page-intro"><div><span class="section-kicker">KRISHIMITRA AI</span><h1 data-i18n="assistantTitle">Ask your farming question</h1><p data-i18n="assistantDesc">Tell us what is happening on your farm. Get clear, step-by-step guidance.</p></div><span class="large-page-icon"><i data-lucide="messages-square"></i></span></div>
+        <div class="assistant-layout">
+          <div class="chat-panel panel">
+            <div class="chat-top"><div class="bot-avatar"><i data-lucide="sprout"></i></div><div><strong>KrishiMitra</strong><small><span class="pulse"></span> <span data-i18n="chatReady">Ready to help · Any language</span></small></div><button class="icon-btn" id="clearChat" title="New conversation"><i data-lucide="rotate-ccw"></i></button></div>
+            <div class="chat-messages" id="chatMessages" aria-live="polite">
+              <div class="message bot-message"><div class="message-avatar"><i data-lucide="sprout"></i></div><div class="message-body"><div class="message-meta">KrishiMitra <span>· Just now</span></div><div class="bubble" data-i18n="welcomeChat">Namaste! 🌱 I can help you understand crop symptoms, farming practices and government schemes. What would you like to know?</div><div class="message-source"><i data-lucide="info"></i> <span data-i18n="welcomeNotice">I will clearly flag information that needs verification.</span></div></div></div>
+            </div>
+            <div class="suggested-prompts" id="suggestedPrompts"><button data-question="My wheat leaves are turning yellow. What should I check?">🌾 Yellow leaves in wheat</button><button data-question="Tell me about PM-KISAN and how to check my status.">🏛️ PM-KISAN status</button><button data-question="What should I check before spraying pesticide?">🧴 Safe spraying checklist</button></div>
+            <form class="chat-composer" id="chatForm"><button type="button" class="composer-tool" id="voiceBtn" title="Speak your question"><i data-lucide="mic"></i></button><textarea id="chatInput" rows="1" placeholder="Ask in any language…" data-i18n-placeholder="chatPlaceholder" required></textarea><button class="send-btn" type="submit" aria-label="Send message"><i data-lucide="arrow-up"></i></button></form>
+            <div class="composer-foot"><span><i data-lucide="shield-check"></i> <span data-i18n="chatDisclaimer">Do not share Aadhaar, bank details or OTPs.</span></span><span id="voiceStatus"></span></div>
+          </div>
+          <aside class="side-help"><div class="panel help-card"><span class="help-icon"><i data-lucide="lightbulb"></i></span><h3 data-i18n="betterAnswerTitle">Get a better answer</h3><p data-i18n="betterAnswerDesc">Share these details when relevant:</p><ul><li data-i18n="better1">Crop and variety</li><li data-i18n="better2">Village or district</li><li data-i18n="better3">When symptoms began</li><li data-i18n="better4">Recent rain or irrigation</li></ul></div><div class="panel caution-card"><i data-lucide="alert-triangle"></i><div><strong data-i18n="importantTitle">Important</strong><p data-i18n="importantDesc">AI guidance may be incomplete. Confirm pesticide, disease and scheme decisions with the relevant expert or official source.</p></div></div></aside>
+        </div>
+      </section>
+
+      <section class="view" id="view-crop">
+        <div class="page-intro"><div><span class="section-kicker">CROP HEALTH</span><h1 data-i18n="cropTitle">Crop Doctor</h1><p data-i18n="cropDesc">Describe what you see. We’ll help you narrow down what to check next.</p></div><span class="large-page-icon orange"><i data-lucide="scan-search"></i></span></div>
+        <div class="crop-layout">
+          <form class="panel crop-form" id="cropForm">
+            <div class="form-heading"><span class="form-step">01</span><div><h3 data-i18n="cropDetails">Crop details</h3><p data-i18n="cropDetailsDesc">A little context helps make advice more relevant.</p></div></div>
+            <label class="field-label" for="cropType" data-i18n="cropTypeLabel">Which crop?</label>
+            <select id="cropType" required><option value="wheat">Wheat / गेहूँ</option><option value="rice">Rice / धान</option><option value="tomato">Tomato / टमाटर</option><option value="potato">Potato / आलू</option><option value="mustard">Mustard / सरसों</option><option value="other">Other crop</option></select>
+            <label class="field-label" for="cropStage" data-i18n="cropStageLabel">Growth stage</label>
+            <select id="cropStage"><option>Seedling / early growth</option><option>Vegetative growth</option><option>Flowering</option><option>Fruiting / grain filling</option><option>Near harvest</option><option>Not sure</option></select>
+            <label class="field-label" for="symptom" data-i18n="symptomLabel">Main symptom</label>
+            <select id="symptom" required><option value="yellow">Yellow leaves</option><option value="spots">Spots or patches on leaves</option><option value="wilting">Wilting / drooping</option><option value="holes">Holes or insects</option><option value="stunted">Slow growth</option><option value="rot">Rot / unusual smell</option><option value="other">Other / not sure</option></select>
+            <label class="field-label" for="symptomDuration" data-i18n="durationLabel">When did it start?</label>
+            <select id="symptomDuration"><option>Within the last 1–2 days</option><option>3–7 days ago</option><option>More than a week ago</option><option>Not sure</option></select>
+            <label class="field-label" for="cropNotes" data-i18n="extraNotes">Additional details (optional)</label>
+            <textarea id="cropNotes" rows="3" placeholder="e.g. lower leaves only, after heavy rain…"></textarea>
+            <label class="field-label" data-i18n="photoLabel">Add a crop photo (optional)</label>
+            <label class="upload-box" for="cropPhoto"><i data-lucide="image-plus"></i><strong data-i18n="uploadTitle">Upload a leaf or plant photo</strong><small data-i18n="uploadDesc">Preview only in this prototype; no image diagnosis is performed.</small><input type="file" id="cropPhoto" accept="image/*"></label>
+            <div id="photoPreview" class="photo-preview hidden"></div>
+            <button class="btn btn-primary full-btn" type="submit"><i data-lucide="search"></i><span data-i18n="analyzeCrop">Review symptoms & next steps</span></button>
+          </form>
+          <div class="crop-result-column">
+            <div class="panel crop-empty" id="cropEmpty"><div class="empty-illustration"><i data-lucide="sprout"></i><span><i data-lucide="search"></i></span></div><h3 data-i18n="cropResultTitle">Your guidance will appear here</h3><p data-i18n="cropResultDesc">Choose a crop and describe the symptom. This tool offers a preliminary checklist, not a confirmed diagnosis.</p><div class="result-trust"><i data-lucide="shield-check"></i><span data-i18n="cropTrust">Safety first: no automatic pesticide recommendations.</span></div></div>
+            <div class="panel crop-result hidden" id="cropResult"></div>
+            <div class="panel expert-card"><div class="expert-icon"><i data-lucide="users"></i></div><div><h3 data-i18n="expertTitle">Need a confident diagnosis?</h3><p data-i18n="expertDesc">Contact your local Krishi Vigyan Kendra (KVK) or agriculture extension officer with photos and field details.</p><a href="https://kvk.icar.gov.in/" target="_blank" rel="noopener noreferrer" class="text-link">Find a KVK <i data-lucide="external-link"></i></a></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="view-weather">
+        <div class="page-intro"><div><span class="section-kicker">LOCAL CONDITIONS</span><h1 data-i18n="weatherTitle">Weather & field advice</h1><p data-i18n="weatherDesc">Look up current weather and a short forecast for a town or district.</p></div><span class="large-page-icon blue"><i data-lucide="cloud-sun"></i></span></div>
+        <div class="weather-search panel"><div class="weather-search-icon"><i data-lucide="map-pin"></i></div><div class="weather-search-copy"><strong data-i18n="locationTitle">Where is your farm?</strong><small data-i18n="locationDesc">Enter a city or district to fetch forecast data.</small></div><form id="weatherForm" class="location-form"><input id="locationInput" value="Greater Noida" placeholder="e.g. Meerut, Uttar Pradesh" required/><button class="btn btn-primary" type="submit"><i data-lucide="search"></i><span data-i18n="getWeather">Get weather</span></button></form></div>
+        <div id="weatherStatus" class="weather-status" role="status">Weather has not been loaded yet.</div>
+        <div id="weatherContent" class="weather-content">
+          <div class="weather-main panel"><div class="weather-main-top"><div><span class="section-kicker" data-i18n="currentConditions">CURRENT CONDITIONS</span><h2 id="weatherPlace">Greater Noida</h2><p id="weatherDate">Fetch live weather to see local conditions</p></div><div class="weather-symbol"><i data-lucide="cloud-sun"></i></div></div><div class="weather-temp"><span id="weatherTemp">--°</span><div><strong id="weatherDescription">Awaiting weather data</strong><small id="weatherFeels">Temperature and wind will appear here</small></div></div><div class="weather-metrics"><div><i data-lucide="droplets"></i><span>Humidity</span><strong id="weatherHumidity">--%</strong></div><div><i data-lucide="wind"></i><span>Wind speed</span><strong id="weatherWind">-- km/h</strong></div><div><i data-lucide="cloud-rain"></i><span>Rain chance</span><strong id="weatherRain">--%</strong></div></div></div>
+          <div class="panel forecast-panel"><div class="panel-heading"><div><span class="section-kicker">NEXT DAYS</span><h3 data-i18n="forecastTitle">5-day outlook</h3></div><i data-lucide="calendar-days"></i></div><div id="forecastDays" class="forecast-days"><div class="forecast-placeholder">Fetch weather to see the forecast.</div></div></div>
+        </div>
+        <div class="panel field-advice"><div class="advice-icon"><i data-lucide="clipboard-check"></i></div><div><span class="section-kicker" data-i18n="fieldChecklist">FIELD CHECKLIST</span><h3 data-i18n="fieldChecklistTitle">Before you irrigate or spray</h3><div class="checklist-grid"><div><i data-lucide="check-circle-2"></i><span data-i18n="field1">Check soil moisture at root level.</span></div><div><i data-lucide="check-circle-2"></i><span data-i18n="field2">Avoid spraying in strong winds or before rain.</span></div><div><i data-lucide="check-circle-2"></i><span data-i18n="field3">Follow the product label and local advisory.</span></div><div><i data-lucide="check-circle-2"></i><span data-i18n="field4">Use official local weather warnings for decisions.</span></div></div></div></div>
+        <p class="data-attribution">Weather data: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>. Forecasts are model-based and may differ from local conditions.</p>
+      </section>
+
+      <section class="view" id="view-schemes">
+        <div class="page-intro"><div><span class="section-kicker">OFFICIAL INFORMATION</span><h1 data-i18n="schemesTitle">Government scheme finder</h1><p data-i18n="schemesDesc">Explore official portals. Eligibility and status must be confirmed by the relevant authority.</p></div><span class="large-page-icon purple"><i data-lucide="landmark"></i></span></div>
+        <div class="scheme-banner"><div class="scheme-banner-icon"><i data-lucide="badge-indian-rupee"></i></div><div><span data-i18n="schemeBannerKicker">A QUICK REMINDER</span><h2 data-i18n="schemeBannerTitle">Your details. Your decision.</h2><p data-i18n="schemeBannerDesc">Never share your OTP, bank PIN or Aadhaar details with an unknown caller or unofficial website.</p></div><i data-lucide="shield-check" class="banner-shield"></i></div>
+        <div class="scheme-filter"><label class="search-field"><i data-lucide="search"></i><input id="schemeSearch" placeholder="Search schemes…" data-i18n-placeholder="schemeSearchPlaceholder"/></label><div class="filter-note"><i data-lucide="check-circle-2"></i><span data-i18n="officialOnly">Official / government source links</span></div></div>
+        <div class="scheme-grid" id="schemeGrid">
+          <article class="scheme-card" data-search="pm kisan income support registration status central government"><div class="scheme-card-top"><span class="scheme-symbol green"><i data-lucide="sprout"></i></span><span class="official-pill"><i data-lucide="badge-check"></i> Official</span></div><span class="scheme-category">INCOME SUPPORT</span><h3>PM-KISAN Samman Nidhi</h3><p>Explore farmer registration, beneficiary status, e-KYC and scheme guidelines on the official portal.</p><div class="scheme-card-meta"><span><i data-lucide="building-2"></i> Govt. of India</span><span><i data-lucide="external-link"></i> Official portal</span></div><a class="btn btn-outline full-btn" href="https://pmkisan.gov.in/" target="_blank" rel="noopener noreferrer">Open PM-KISAN <i data-lucide="arrow-up-right"></i></a></article>
+          <article class="scheme-card" data-search="pm fasal bima yojana crop insurance premium claims"><div class="scheme-card-top"><span class="scheme-symbol blue"><i data-lucide="umbrella"></i></span><span class="official-pill"><i data-lucide="badge-check"></i> Official</span></div><span class="scheme-category">CROP INSURANCE</span><h3>PM Fasal Bima Yojana</h3><p>Find crop insurance information, application guidance and links for notified crops and areas.</p><div class="scheme-card-meta"><span><i data-lucide="building-2"></i> Govt. initiative</span><span><i data-lucide="external-link"></i> Official portal</span></div><a class="btn btn-outline full-btn" href="https://pmfby.gov.in/" target="_blank" rel="noopener noreferrer">Open PMFBY <i data-lucide="arrow-up-right"></i></a></article>
+          <article class="scheme-card" data-search="soil health card soil testing nutrients recommendations"><div class="scheme-card-top"><span class="scheme-symbol orange"><i data-lucide="test-tube"></i></span><span class="official-pill"><i data-lucide="badge-check"></i> Official</span></div><span class="scheme-category">SOIL HEALTH</span><h3>Soil Health Card</h3><p>Learn about soil testing and nutrient recommendations. Availability and process can vary by state.</p><div class="scheme-card-meta"><span><i data-lucide="building-2"></i> Agriculture services</span><span><i data-lucide="external-link"></i> Official portal</span></div><a class="btn btn-outline full-btn" href="https://soilhealth.dac.gov.in/" target="_blank" rel="noopener noreferrer">Open Soil Health <i data-lucide="arrow-up-right"></i></a></article>
+          <article class="scheme-card" data-search="kisan call centre helpline agricultural advice phone"><div class="scheme-card-top"><span class="scheme-symbol purple"><i data-lucide="headset"></i></span><span class="official-pill"><i data-lucide="badge-check"></i> Official</span></div><span class="scheme-category">FARMER SUPPORT</span><h3>Kisan Call Centre</h3><p>For farming questions, seek assistance through the government’s farmer support channels.</p><div class="scheme-card-meta"><span><i data-lucide="building-2"></i> Agriculture support</span><span><i data-lucide="external-link"></i> Govt. website</span></div><a class="btn btn-outline full-btn" href="https:// ಕೃಷि.gov.in/" id="kccLink" target="_blank" rel="noopener noreferrer">Explore support <i data-lucide="arrow-up-right"></i></a></article>
+          <article class="scheme-card" data-search="my scheme government scheme eligibility discovery"><div class="scheme-card-top"><span class="scheme-symbol teal"><i data-lucide="compass"></i></span><span class="official-pill"><i data-lucide="badge-check"></i> Official</span></div><span class="scheme-category">SCHEME DISCOVERY</span><h3>myScheme Portal</h3><p>Search government schemes and check information relevant to your profile on the official portal.</p><div class="scheme-card-meta"><span><i data-lucide="building-2"></i> Govt. of India</span><span><i data-lucide="external-link"></i> Official portal</span></div><a class="btn btn-outline full-btn" href="https://www.myscheme.gov.in/" target="_blank" rel="noopener noreferrer">Open myScheme <i data-lucide="arrow-up-right"></i></a></article>
+          <article class="scheme-card" data-search="krishi vigyan kendra local expert agriculture extension crop diagnosis"><div class="scheme-card-top"><span class="scheme-symbol green"><i data-lucide="users"></i></span><span class="official-pill"><i data-lucide="badge-check"></i> Official</span></div><span class="scheme-category">LOCAL EXPERTISE</span><h3>Krishi Vigyan Kendra (KVK)</h3><p>Connect with agricultural extension resources for local, crop-specific support and diagnosis.</p><div class="scheme-card-meta"><span><i data-lucide="building-2"></i> ICAR network</span><span><i data-lucide="external-link"></i> Official directory</span></div><a class="btn btn-outline full-btn" href="https://kvk.icar.gov.in/" target="_blank" rel="noopener noreferrer">Find a KVK <i data-lucide="arrow-up-right"></i></a></article>
+        </div>
+        <div id="noSchemes" class="empty-search hidden"><i data-lucide="search-x"></i><strong>No matching schemes</strong><span>Try a different keyword.</span></div>
+        <div class="source-note"><i data-lucide="info"></i><div><strong data-i18n="schemeSourceTitle">How we handle scheme information</strong><p data-i18n="schemeSourceDesc">These cards link to official portals. This prototype does not access your personal records or determine your eligibility. Scheme rules, deadlines and availability can change; confirm details on the official portal.</p></div></div>
+      </section>
+
+      <section class="view" id="view-about">
+        <div class="page-intro"><div><span class="section-kicker">ABOUT THE PROJECT</span><h1>Designed around farmer trust</h1><p>KrishiMitra AI is a working prototype for accessible, multilingual farmer assistance.</p></div><span class="large-page-icon"><i data-lucide="sprout"></i></span></div>
+        <div class="panel about-panel"><h2>What works in this prototype</h2><div class="about-feature-grid"><div><i data-lucide="languages"></i><strong>Language toggle</strong><p>Interface labels can switch between English and Hindi; the AI chatbot detects the language used in your message and replies in that language when supported.</p></div><div><i data-lucide="message-circle"></i><strong>Farmer chat</strong><p>AI-powered multilingual farmer assistant: automatically detects the language and responds in the same language when Gemini is configured.</p></div><div><i data-lucide="cloud-sun"></i><strong>Live weather lookup</strong><p>Uses Open-Meteo geocoding and forecast endpoints when internet access is available.</p></div><div><i data-lucide="shield-check"></i><strong>Transparent limits</strong><p>Crop image analysis uses the configured AI model when available and provides preliminary observations, not a confirmed diagnosis.</p></div></div><h3>Important limitations</h3><p>Live AI chat and crop-image analysis require a valid Gemini API key in the backend .env file. Without it, the app falls back to demo responses. Scheme cards link to official portals but do not check personal eligibility. Weather depends on a third-party forecast service and an internet connection. Do not use this prototype as the sole basis for pesticide, medical, financial or legal decisions.</p></div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop hidden" id="profileModal"><div class="modal panel"><button class="modal-close icon-btn" id="closeProfile"><i data-lucide="x"></i></button><span class="section-kicker">PERSONALISE</span><h2>Welcome, farmer</h2><p>Add a display name and your district for a more personal demo. This stays in this browser session only.</p><label class="field-label" for="farmerName">Your name (optional)</label><input id="farmerName" placeholder="e.g. Ramesh ji"/><label class="field-label" for="farmerDistrict">Village / district (optional)</label><input id="farmerDistrict" placeholder="e.g. Meerut, Uttar Pradesh"/><button class="btn btn-primary full-btn" id="saveProfile">Save profile</button></div></div>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="app.js"></script>
+</body>
+</html>
